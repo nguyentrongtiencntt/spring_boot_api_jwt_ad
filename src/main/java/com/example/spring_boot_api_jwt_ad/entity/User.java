@@ -15,13 +15,12 @@ import java.util.Set;
 public class User extends BaseEntity {
 
     private String username;
-
     private String password;
 
     @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
-    @JoinTable(name = "t_user_role", joinColumns = {@JoinColumn(name = "user_id")},
+    @JoinTable(name = "t_user_role",
+            joinColumns = {@JoinColumn(name = "user_id")},
             inverseJoinColumns = {@JoinColumn(name = "role_id")})
-
     private Set<Role> roles = new HashSet<>();
 
 
