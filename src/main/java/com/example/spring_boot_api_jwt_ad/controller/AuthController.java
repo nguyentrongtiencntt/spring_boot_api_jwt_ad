@@ -70,7 +70,7 @@ public class AuthController {
         return ResponseEntity.ok("This is update");
     }
 
-
+//
 //    Object principal = SecurityContextHolder
 //            .getContext().getAuthentication().getPrincipal();
 //
